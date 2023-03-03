@@ -19,7 +19,7 @@ const TodoPage = () => {
       };
 
       const renderItem = ({ item }) => (
-        <View styles={styles.taskItem}>
+        <View style={styles.taskItem}>
             <TouchableOpacity >
             <View style={styles.taskContainer}>
                 <Text style={styles.task}>{item.task}</Text>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
+        // alignItems: 'center',
         justifyContent: 'center',
         padding: 20,
       },
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: 'bold',
         marginBottom: 20,
+        alignSelf: 'center',
         color: 'black'
       },
       inputContainer: {
@@ -111,6 +112,7 @@ const styles = StyleSheet.create({
       taskContainer: {
         backgroundColor: 'black',
         color: 'white',
+        maxWidth: 300,
         padding: 10,
         borderRadius: 4,
         marginBottom: 10,
@@ -119,9 +121,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
       },
       taskItem: {
-        // display: 'flex',
-        flex: 1,
         flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        // marginBottom: 6,
       }
 })
 
